@@ -16,9 +16,12 @@
     :root{
       --bg:#05060a;
       --panel:rgba(12,16,32,.60);
+      --panel2:rgba(12,16,32,.50);
       --text:#e9edf6;
       --muted:#a6b0c6;
       --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#f6c453;
       --danger:#ff4d4d;
       --radius:18px;
       --max:980px;
@@ -57,9 +60,7 @@
     }
     .brand h1{margin:0; font-size:16px; letter-spacing:.2px}
     .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
-    .nav{
-      display:flex; flex-wrap:wrap; gap:10px;
-    }
+    .nav{display:flex; flex-wrap:wrap; gap:10px;}
     .chip{
       text-decoration:none;
       font-weight:800;
@@ -95,12 +96,7 @@
       background: rgba(255,255,255,.03);
       font-weight:850;
     }
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top:14px;
-    }
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:14px;}
     @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
     .card{
       border:1px solid var(--line);
@@ -142,6 +138,17 @@
       gap:10px;
       justify-content:space-between;
     }
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12px;
+      padding:2px 6px;
+      border-radius:8px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+    }
+    .tight p{margin:10px 0 0; color:var(--muted)}
+    .tight p:first-child{margin-top:0}
   </style>
 </head>
 
@@ -168,7 +175,8 @@
       <h2>Prophecy Sports Legal Hub</h2>
       <p>
         This page contains our Privacy Policy, Terms of Service, and disclaimers for Prophecy Sports.
-        For help, visit <strong>/support/</strong> or email <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
+        For help, visit <span class="kbd">/support/</span> or email
+        <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
       </p>
 
       <div class="ctaRow">
@@ -189,7 +197,7 @@
           <h3>Quick Contact</h3>
           <p>
             Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a><br/>
-            For faster support include your device model, iOS version, and app version.
+            For faster support include device model, iOS version, and app version.
           </p>
         </div>
       </div>
@@ -200,76 +208,130 @@
       </div>
     </section>
 
-    <section id="privacy" class="section">
+    <!-- ===================== PRIVACY ===================== -->
+    <section id="privacy" class="section tight">
       <h2>Privacy Policy</h2>
       <p class="meta">Last updated: December 31, 2024</p>
 
+      <p>
+        Prophecy Sports (“we,” “us,” or “our”) respects your privacy and is committed to protecting it.
+        This Privacy Policy explains how we collect, use, disclose, and safeguard information when you use the Prophecy Sports mobile application (the “App”).
+      </p>
+
       <h3>Information We Collect</h3>
+      <p>
+        We may collect certain information from and about users of our App, including:
+      </p>
       <ul>
-        <li><strong>Account information</strong> (name, email address) if you sign in with Apple or Google (if enabled).</li>
-        <li><strong>Usage information</strong> such as feature interactions and device identifiers.</li>
-        <li><strong>Support communications</strong> (messages you send to support@njdtech.org).</li>
+        <li><strong>Account information</strong> (such as name and email) if you choose to sign in with Apple or Google (when enabled).</li>
+        <li><strong>Usage information</strong> such as feature interactions, diagnostic events, and general app behavior.</li>
+        <li><strong>Device information</strong> such as device model, operating system version, and identifiers used for reliability and troubleshooting.</li>
+        <li><strong>Support communications</strong> you send to <a href="mailto:support@njdtech.org">support@njdtech.org</a>.</li>
       </ul>
 
       <h3>How We Use Your Information</h3>
       <ul>
-        <li>Provide and maintain app functionality.</li>
-        <li>Improve performance, reliability, and user experience.</li>
-        <li>Provide customer support and respond to requests.</li>
-        <li>Comply with legal obligations and protect against misuse/fraud.</li>
+        <li>To provide, operate, maintain, and improve the App.</li>
+        <li>To respond to support requests and communicate with you about the App.</li>
+        <li>To monitor for reliability, prevent abuse, and maintain security.</li>
+        <li>To comply with applicable laws and enforce our policies.</li>
       </ul>
 
-      <h3>Your Rights</h3>
-      <ul>
-        <li>Request deletion of your account and associated data.</li>
-        <li>Request support or assistance related to your information.</li>
-      </ul>
+      <h3>Sharing and Disclosure</h3>
+      <p>
+        We do not sell or rent your personal information.
+        We may disclose information only when necessary to comply with legal obligations, protect the rights and safety of users, or to maintain the security and integrity of the service.
+      </p>
+
+      <h3>Data Retention</h3>
+      <p>
+        We retain information only as long as reasonably necessary to provide the App and for legitimate business purposes, such as troubleshooting, security, and compliance with legal obligations.
+      </p>
+
+      <h3>Data Deletion Requests</h3>
+      <p>
+        You may request deletion of your account and associated data by contacting
+        <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
+      </p>
+
+      <h3>Children’s Privacy</h3>
+      <p>
+        The App is not intended for children under 13. We do not knowingly collect personal information from children under 13.
+      </p>
+
+      <h3>Changes to this Privacy Policy</h3>
+      <p>
+        We may update this Privacy Policy from time to time. We will update the “Last updated” date when changes are made.
+      </p>
 
       <h3>Contact</h3>
-      <p class="meta" style="margin-top:-6px">
+      <p>
         Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
       </p>
     </section>
 
-    <section id="terms" class="section">
+    <!-- ===================== TERMS ===================== -->
+    <section id="terms" class="section tight">
       <h2>Terms of Service</h2>
       <p class="meta">Last updated: December 31, 2024</p>
 
+      <p>
+        By accessing or using Prophecy Sports (the “App”), you agree to be bound by these Terms of Service (“Terms”).
+        If you do not agree to these Terms, do not use the App.
+      </p>
+
       <h3>Acceptable Use</h3>
       <ul>
-        <li>Do not violate laws or regulations.</li>
-        <li>Do not attempt unauthorized access to systems.</li>
-        <li>Do not transmit malicious code.</li>
-        <li>Do not interfere with service operation.</li>
+        <li>You may not use the App for unlawful purposes or in violation of any applicable laws or regulations.</li>
+        <li>You may not attempt to gain unauthorized access to systems or accounts related to the App.</li>
+        <li>You may not interfere with or disrupt the integrity or performance of the App.</li>
+        <li>You may not transmit malware, malicious code, or harmful content.</li>
       </ul>
 
-      <h3>Contact</h3>
-      <p class="meta" style="margin-top:-6px">
-        Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+      <h3>Informational & Entertainment Use Only</h3>
+      <p>
+        Prophecy Sports provides sports-related insights, predictions, comparisons, and analysis for informational and entertainment purposes only.
+        We do not accept wagers, facilitate gambling, or operate as a sportsbook.
       </p>
+
+      <h3>No Guarantees</h3>
+      <p>
+        Outcomes are uncertain. Past performance is not indicative of future results.
+        We make no warranties regarding the accuracy, completeness, or reliability of content provided by the App.
+      </p>
+
+      <h3>Limitation of Liability</h3>
+      <p>
+        To the fullest extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages,
+        or any loss arising from your use of or inability to use the App.
+      </p>
+
+      <h3>Termination</h3>
+      <p>
+        We may suspend or terminate access to the App at our discretion for violations of these Terms or for security reasons.
+      </p>
+
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a></p>
     </section>
 
-    <section id="disclaimer" class="section">
+    <!-- ===================== DISCLAIMER ===================== -->
+    <section id="disclaimer" class="section tight">
       <h2>Disclaimer</h2>
-      <p class="meta" style="margin-top:-6px">
+
+      <p>
         Prophecy Sports content is provided for informational and entertainment purposes only.
         Nothing in the App constitutes betting advice, gambling advice, financial advice, or professional advice.
       </p>
 
-      <h3>No Guarantees</h3>
-      <ul>
-        <li>Outcomes are uncertain. Past performance is not indicative of future results.</li>
-        <li>We make no guarantees regarding accuracy, completeness, or usefulness of information.</li>
-      </ul>
-
-      <h3>Limitation of Liability</h3>
-      <p class="meta" style="margin-top:-6px">
-        To the fullest extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages.
+      <h3>Responsible Gaming</h3>
+      <p>
+        If you or someone you know has a gambling problem, call the National Problem Gambling Helpline at
+        <a href="tel:18005224700">1-800-522-4700</a>.
       </p>
 
       <div class="note">
-        <strong>Help available:</strong> National Problem Gambling Helpline:
-        <a href="tel:18005224700">1-800-522-4700</a>
+        <strong>Reminder:</strong> We do not accept wagers or facilitate gambling.
       </div>
     </section>
 
