@@ -2,108 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
   <title>Prophecy Sports — Support</title>
-  <meta name="description" content="Support for the Prophecy Sports iOS app." />
+  <meta name="description" content="Prophecy Sports support page. Contact, FAQs, and links to privacy policy, terms, and legal disclaimer." />
   <style>
     :root{
-      --bg:#070B12;
-      --card:#0D1320;
-      --text:#EAF0FF;
-      --muted:rgba(234,240,255,.72);
-      --border:rgba(255,255,255,.10);
-      --accent:#6EE7B7;
-      --warn:#FB7185;
-      --link:#7DD3FC;
+      --bg:#05060a; --panel:#0c1020; --text:#e9edf6; --muted:#a6b0c6;
+      --line:rgba(255,255,255,.10); --accent:#7c5cff; --good:#38d996; --warn:#ff4d4d;
+      --radius:18px; --max:900px; --shadow: 0 18px 60px rgba(0,0,0,.55);
     }
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
-      background: radial-gradient(900px 450px at 25% 10%, rgba(110,231,183,.12), transparent 55%),
-                  radial-gradient(900px 450px at 75% 20%, rgba(125,211,252,.10), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      padding:48px 16px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 700px at 20% 10%, rgba(124,92,255,.18), transparent 60%),
+                  linear-gradient(180deg, var(--bg), #070814 60%, #05060a);
+      color:var(--text); line-height:1.55;
     }
-    .wrap{ max-width:860px; margin:0 auto; }
-    .card{
-      border:1px solid var(--border);
-      border-radius:18px;
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
-      padding:22px 18px;
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 48px;}
+    .head{
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
+      margin-bottom:14px;
     }
-    h1{ margin:0; font-size:34px; }
-    .muted{ color:var(--muted); line-height:1.55; }
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-    .row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .title{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .logo{width:42px; height:42px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(246,196,83,.75));
+      box-shadow: 0 12px 30px rgba(124,92,255,.25);
+    }
+    h1{margin:0; font-size:18px}
+    .sub{margin:0; color:var(--muted); font-size:12px}
+    .chiprow{display:flex; flex-wrap:wrap; gap:10px}
+    .chip{
+      text-decoration:none; color:inherit; font-size:13px; font-weight:600;
+      padding:10px 12px; border:1px solid var(--line);
+      border-radius:999px; background: rgba(255,255,255,.03);
+    }
+    .chip:hover{border-color: rgba(124,92,255,.55)}
+    .panel{
+      border:1px solid var(--line);
+      background: rgba(12,16,32,.55);
+      border-radius: calc(var(--radius) + 8px);
+      padding:20px;
+      box-shadow: var(--shadow);
+    }
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+    .card{border:1px solid var(--line); border-radius:var(--radius); padding:16px; background: rgba(255,255,255,.02)}
+    .card h2{margin:0 0 8px; font-size:15px}
+    .card p{margin:0; color:var(--muted)}
     .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 12px;
+      display:inline-flex; align-items:center; justify-content:center;
+      margin-top:12px;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid rgba(124,92,255,.45);
+      background: linear-gradient(180deg, rgba(124,92,255,.18), rgba(124,92,255,.08));
+      text-decoration:none; color:var(--text); font-weight:800; font-size:13px;
+    }
+    details{
+      margin-top:12px;
+      border:1px solid var(--line);
       border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.02);
-      color:var(--text);
-      text-decoration:none;
+      padding:12px 12px;
+      background: rgba(255,255,255,.02);
     }
-    .btn:hover{ background:rgba(255,255,255,.04); text-decoration:none; }
-    .box{
+    summary{cursor:pointer; font-weight:700}
+    details p{margin:10px 0 0; color:var(--muted)}
+    .notice{
       margin-top:14px;
-      border:1px solid rgba(251,113,133,.35);
-      background:linear-gradient(180deg, rgba(251,113,133,.10), rgba(251,113,133,.04));
-      border-radius:16px;
-      padding:14px 14px;
+      border-left:4px solid var(--warn);
+      padding:12px 14px;
+      border-radius:14px;
+      background: rgba(255,77,77,.08);
+      border:1px solid rgba(255,77,77,.20);
     }
-    .box strong{ color:#FFD1D9; }
-    ul{ margin:10px 0 0 18px; color:var(--muted); line-height:1.6; }
-    code{ background:rgba(255,255,255,.08); padding:2px 6px; border-radius:8px; }
-    .footer{ margin-top:14px; font-size:12px; color:rgba(234,240,255,.55); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    .footer{
+      margin-top:18px; color:var(--muted); font-size:12px;
+      border-top:1px solid var(--line); padding-top:14px;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+    }
+    code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--line)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
-      <a class="btn" href="../">← Back</a>
-
-      <h1 style="margin-top:14px;">Prophecy Sports — Support</h1>
-      <p class="muted">
-        Need help with the Prophecy Sports iOS app? Contact us below and include details like your device model,
-        iOS version, and what you were viewing when the issue occurred.
-      </p>
-
-      <div class="row">
-        <a class="btn" href="mailto:support@prophecy.ai">Email: support@prophecy.ai</a>
-        <a class="btn" href="tel:18005224700">Help Line: 1-800-522-4700</a>
-      </div>
-
-      <div class="box">
-        <strong>Important Notice:</strong>
-        Prophecy Sports is an informational and entertainment service only.
-        We do <strong>not</strong> accept bets, process wagers, or operate as a sportsbook.
-        Content does not constitute gambling advice, financial advice, or professional advice.
-      </div>
-
-      <h2 style="margin:16px 0 6px;">Common Requests</h2>
-      <ul>
-        <li>Bug reports (sport/league + steps to reproduce)</li>
-        <li>Feedback and feature requests</li>
-        <li>Questions about odds sources and update timing</li>
-        <li>Account / subscription questions (if applicable)</li>
-      </ul>
-
-      <h2 style="margin:16px 0 6px;">Responsible Gambling Resources</h2>
-      <ul>
-        <li>National Problem Gambling Helpline (US): <a href="tel:18005224700">1-800-522-4700</a></li>
-        <li>National Council on Problem Gambling: <a href="https://www.ncpgambling.org" target="_blank" rel="noopener">ncpgambling.org</a></li>
-        <li>Gamblers Anonymous: <a href="https://www.gamblersanonymous.org" target="_blank" rel="noopener">gamblersanonymous.org</a></li>
-      </ul>
-
-      <div class="footer">
-        <div>© 2025 Prophecy Sports</div>
-        <div>Last updated: <code>2025-12-14</code></div>
+    <div class="head">
+      <a class="title" href="./index.html" aria-label="Back to Prophecy Sports home">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Prophecy Sports — Support</h1>
+          <p class="sub">Help, contact, FAQs, and legal links</p>
+        </div>
+      </a>
+      <div class="chiprow">
+        <a class="chip" href="./index.html">Home</a>
+        <a class="chip" href="./index.html#privacy">Privacy</a>
+        <a class="chip" href="./index.html#terms">Terms</a>
+        <a class="chip" href="./index.html#disclaimer">Disclaimer</a>
       </div>
     </div>
+
+    <section class="panel">
+      <p style="margin:0; color:var(--muted)">
+        For the App Store “Support URL”, you can use this page directly:
+        <code>.../prophecysports/support-index.html</code>
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Contact Support</h2>
+          <p>Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a></p>
+          <p style="margin-top:8px">
+            Include: device model, iOS version, app version, and what you expected vs what happened.
+          </p>
+          <a class="btn" href="mailto:support@njdtech.org?subject=Prophecy%20Sports%20Support%20Request">Email Support</a>
+        </div>
+
+        <div class="card">
+          <h2>Subscriptions & Billing</h2>
+          <p>
+            If you have a subscription, billing is handled by Apple. You can manage or cancel in
+            <code>Settings → Apple ID → Subscriptions</code>.
+          </p>
+        </div>
+      </div>
+
+      <details>
+        <summary>FAQ: Is Prophecy Sports a sportsbook?</summary>
+        <p>No. Prophecy Sports is informational/entertainment only. We do not accept bets, process wagers, or operate as a sportsbook.</p>
+      </details>
+
+      <details>
+        <summary>FAQ: My odds/picks look off — what should I send support?</summary>
+        <p>Send the league, matchup, time (with timezone), sportsbook shown, and a screenshot. If possible, include your region/state because odds feeds can vary.</p>
+      </details>
+
+      <details>
+        <summary>FAQ: How do I request account deletion?</summary>
+        <p>Email <a href="mailto:support@njdtech.org">support@njdtech.org</a> from the email associated with your account and request deletion (or use in-app deletion if available).</p>
+      </details>
+
+      <div class="notice" role="note">
+        <strong style="display:block; margin-bottom:6px">Important Disclaimer</strong>
+        All content is for informational and entertainment purposes only and does not constitute gambling advice, financial advice, or any other professional advice.
+      </div>
+
+      <div class="footer">
+        <div>
+          National Problem Gambling Helpline: <a href="tel:18005224700">1-800-522-4700</a>
+        </div>
+        <div>© <span id="y"></span> Prophecy Sports</div>
+      </div>
+    </section>
   </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
