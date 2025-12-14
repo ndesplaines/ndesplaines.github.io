@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-  <title>Grocery Scout — Support & Legal</title>
-  <meta name="description" content="Grocery Scout support and legal: privacy policy, terms of service, and contact." />
+  <title>Grocery Scout — Privacy Policy, Terms & About</title>
+  <meta name="description" content="Grocery Scout Privacy Policy, Terms of Service, and About information." />
+
   <style>
     :root{
       --bg:#0b0f0e;
-      --panel:#111817;
+      --panel:rgba(17,24,23,.72);
       --text:#e8f3ee;
       --muted:#a3c0b4;
       --line:rgba(255,255,255,.10);
@@ -19,154 +20,380 @@
       --shadow:0 18px 60px rgba(0,0,0,.55);
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(900px 650px at 20% 10%, rgba(40,199,111,.15), transparent 60%),
-                  linear-gradient(180deg, var(--bg), #070b0b 65%, #050707);
-      color:var(--text); line-height:1.55;
+      background:
+        radial-gradient(1000px 700px at 20% 10%, rgba(40,199,111,.16), transparent 60%),
+        linear-gradient(180deg, var(--bg), #070b0b 65%, #050707);
+      color:var(--text);
+      line-height:1.55;
     }
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 44px;}
-    .top{
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 54px;}
+    .topbar{
       display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
-      padding-bottom:14px;
+      margin-bottom:14px;
     }
     .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
     .logo{
-      width:42px; height:42px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(40,199,111,.9), rgba(40,199,111,.35));
-      box-shadow: 0 12px 30px rgba(40,199,111,.18);
+      width:44px; height:44px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(40,199,111,.92), rgba(40,199,111,.35));
       border:1px solid rgba(255,255,255,.08);
+      box-shadow: 0 12px 30px rgba(40,199,111,.18);
     }
-    h1{margin:0; font-size:16px}
-    .sub{margin:0; font-size:12px; color:var(--muted)}
+    .brand h1{margin:0; font-size:16px}
+    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
     .nav{display:flex; flex-wrap:wrap; gap:10px}
     .chip{
-      text-decoration:none; color:inherit;
-      padding:10px 12px; border:1px solid var(--line);
-      border-radius:999px; background: rgba(255,255,255,.03);
-      font-size:13px;
+      text-decoration:none; font-weight:800; font-size:13px;
+      padding:10px 12px; border-radius:999px;
+      border:1px solid var(--line); background: rgba(255,255,255,.03);
     }
-    .chip:hover{border-color: rgba(40,199,111,.55)}
+    .chip:hover{border-color: rgba(40,199,111,.60)}
     .hero{
       border:1px solid var(--line);
-      border-radius: calc(var(--radius) + 8px);
-      background: rgba(17,24,23,.70);
-      padding:24px;
+      background: var(--panel);
+      border-radius: calc(var(--radius) + 10px);
       box-shadow: var(--shadow);
+      padding:18px;
     }
-    h2{margin:10px 0 8px; font-size:28px}
-    .lead{margin:0; color:var(--muted); max-width:78ch}
-    .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:14px; margin-top:16px}
-    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
-    .card{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:16px;
-      background: rgba(255,255,255,.02);
-    }
-    .card h3{margin:0 0 8px; font-size:15px}
-    .card p{margin:0; color:var(--muted)}
-    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .hero h2{margin:0 0 6px; font-size:18px}
+    .hero p{margin:0; color:var(--muted)}
+    .ctaRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 14px; border-radius:14px;
+      font-weight:950; font-size:13px; text-decoration:none;
       border:1px solid rgba(40,199,111,.45);
       background: linear-gradient(180deg, rgba(40,199,111,.15), rgba(40,199,111,.06));
-      text-decoration:none; color:var(--text); font-weight:800; font-size:13px;
     }
-    .section{margin-top:14px}
-    .section h3{margin:0 0 8px; font-size:16px}
-    .section p{margin:0; color:var(--muted)}
+    .btn.secondary{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-weight:850;
+    }
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .card{border:1px solid var(--line); border-radius:var(--radius); background: rgba(255,255,255,.02); padding:16px;}
+    .card h3{margin:0 0 8px; font-size:14px}
+    .card p{margin:0; color:var(--muted)}
+    .section{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 10px);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .section h2{margin:0 0 8px; font-size:16px}
+    .meta{color:var(--muted); font-size:12px; margin:0 0 12px}
+    ul{margin:10px 0 0 18px}
+    li{margin:6px 0; color:var(--muted)}
     .footer{
-      margin-top:22px; color:var(--muted); font-size:12px;
-      border-top:1px solid var(--line); padding-top:16px;
-      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div class="top">
+    <header class="topbar">
       <a class="brand" href="./index.html" aria-label="Grocery Scout Home">
         <div class="logo" aria-hidden="true"></div>
         <div>
           <h1>Grocery Scout</h1>
-          <p class="sub">Support & legal information</p>
+          <p>Privacy Policy • Terms • About</p>
         </div>
       </a>
+
       <nav class="nav" aria-label="Primary">
-        <a class="chip" href="./support-index.html">Support</a>
+        <a class="chip" href="#about">About</a>
         <a class="chip" href="#privacy">Privacy</a>
         <a class="chip" href="#terms">Terms</a>
+        <a class="chip" href="./support/">Support</a>
       </nav>
-    </div>
+    </header>
 
     <section class="hero">
-      <h2>Shop smarter. Compare faster.</h2>
-      <p class="lead">
-        Grocery Scout helps you compare prices, track lists, and personalize your grocery shopping experience.
-        This page provides support contact and the legal links typically requested for store listing.
+      <h2>Grocery Scout Legal Hub</h2>
+      <p>
+        This page contains Grocery Scout’s About section, Privacy Policy, and Terms of Service.
+        For help, visit <strong>/support/</strong> or email <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
       </p>
+
+      <div class="ctaRow">
+        <a class="btn" href="./support/">Open Support Page</a>
+        <a class="btn secondary" href="#privacy">View Privacy</a>
+        <a class="btn secondary" href="#terms">View Terms</a>
+      </div>
 
       <div class="grid">
         <div class="card">
-          <h3>Quick links</h3>
-          <p>Use these for App Store fields (Support URL, Privacy Policy URL).</p>
-          <div class="btnrow">
-            <a class="btn" href="./support-index.html">Open Support Page</a>
-            <a class="btn" href="#privacy">Privacy Policy</a>
-            <a class="btn" href="#terms">Terms of Service</a>
-          </div>
+          <h3>What Grocery Scout does</h3>
+          <p>
+            Grocery Scout helps you organize grocery lists, compare prices, and discover nearby stores.
+            Location is used only with permission for nearby recommendations and location-based comparisons.
+          </p>
         </div>
-
         <div class="card">
           <h3>Contact</h3>
           <p>
-            Support email: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+            Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a><br/>
+            Include: device model, iOS version, and app version.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="privacy" class="section card" aria-label="Privacy Policy">
-      <h3>Privacy Policy (summary)</h3>
-      <p>
-        Grocery Scout may collect account information (name/email via Google/Apple),
-        profile preferences, grocery lists/history, price comparison searches, and device/usage info.
-        Location data is collected only with permission for nearby recommendations and location-based comparisons.
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section">
+      <h2>About Grocery Scout</h2>
+      <p class="meta">
+        Grocery Scout is a grocery shopping assistant designed to streamline meal planning, grocery list building,
+        store discovery, and price comparisons. The app may use optional location access (with permission) to provide
+        nearby store recommendations and location-based price comparisons.
       </p>
-      <p style="margin-top:10px">
-        To request access, deletion, or export of your data, contact <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
-      </p>
-    </section>
-
-    <section id="terms" class="section card" aria-label="Terms of Service">
-      <h3>Terms of Service (summary)</h3>
-      <p>
-        Users agree to use the app lawfully, not attempt unauthorized access, and not collect user info without consent.
-        The service may be modified or discontinued. Pricing information is informational only; actual prices may vary
-        and should be verified with retailers.
-      </p>
-      <p style="margin-top:10px; color:var(--muted)">
-        Contact: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+      <p class="meta" style="margin-top:-6px">
+        Questions? Email <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
       </p>
     </section>
 
-    <div class="footer">
+    <!-- ===================== PRIVACY ===================== -->
+    <section id="privacy" class="section">
+      <h2>Privacy Policy</h2>
+      <p class="meta">Last updated: December 31, 2024</p>
+
+      <h3>Introduction</h3>
+      <p class="meta" style="margin-top:-6px">
+        Welcome to our Grocery Shopping Assistant app (“we”, “us”, or “our”). This Privacy Policy explains how we collect, use,
+        disclose, and safeguard your information when you use our mobile application.
+      </p>
+
+      <h3>Information We Collect</h3>
+      <p class="meta" style="margin-top:-6px"><strong>Personal Information</strong></p>
+      <ul>
+        <li>Account information (name, email address) when you sign in with Google or Apple.</li>
+        <li>Profile information you choose to provide.</li>
+        <li>Shopping preferences and favorite stores.</li>
+        <li>Budget tracking and spending data (if you use those features).</li>
+      </ul>
+
+      <p class="meta"><strong>Usage Information</strong></p>
+      <ul>
+        <li>Grocery lists and shopping history.</li>
+        <li>Store visits and location data (with permission).</li>
+        <li>Price comparison searches.</li>
+        <li>App usage patterns and preferences.</li>
+        <li>Device information and identifiers.</li>
+      </ul>
+
+      <h3>Location Information</h3>
+      <p class="meta" style="margin-top:-6px">
+        We collect location data only with your explicit permission to provide nearby store recommendations and
+        location-based price comparisons. You can disable location services at any time through your device settings.
+      </p>
+
+      <h3>How We Use Your Information</h3>
+      <ul>
+        <li>Provide and maintain our grocery shopping services.</li>
+        <li>Personalize your shopping experience.</li>
+        <li>Send price alerts and notifications (with your consent).</li>
+        <li>Improve app functionality and user experience.</li>
+        <li>Provide customer support.</li>
+        <li>Analyze usage patterns to enhance services.</li>
+        <li>Comply with legal obligations.</li>
+      </ul>
+
+      <h3>Information Sharing and Disclosure</h3>
+      <p class="meta" style="margin-top:-6px">
+        We do not sell, trade, or rent your personal information to third parties. We may share your information only:
+      </p>
+      <ul>
+        <li>With your explicit consent.</li>
+        <li>To comply with legal obligations.</li>
+        <li>To protect our rights and prevent fraud.</li>
+        <li>In connection with a business transfer or merger.</li>
+        <li>With service providers who assist our operations (under strict confidentiality agreements).</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <p class="meta" style="margin-top:-6px">
+        We implement appropriate security measures to protect personal information against unauthorized access,
+        alteration, disclosure, or destruction. This may include encryption, secure infrastructure, and regular reviews.
+      </p>
+
+      <h3>Data Retention</h3>
+      <p class="meta" style="margin-top:-6px">
+        We retain personal information only as long as necessary to provide services and fulfill the purposes described in this policy.
+        You may request deletion of your account and associated data via the app settings or by emailing support.
+      </p>
+
+      <h3>Your Privacy Rights</h3>
+      <ul>
+        <li>Access your personal information.</li>
+        <li>Correct inaccurate data.</li>
+        <li>Delete your account and data.</li>
+        <li>Export your data (where applicable).</li>
+        <li>Opt-out of marketing communications (if any).</li>
+        <li>Disable location services.</li>
+        <li>Control notification preferences.</li>
+      </ul>
+
+      <h3>Third-Party Services</h3>
+      <p class="meta" style="margin-top:-6px">
+        Our app may integrate with Google and Apple for authentication. Those services have their own privacy policies.
+      </p>
+
+      <h3>Children’s Privacy</h3>
+      <p class="meta" style="margin-top:-6px">
+        Our app is not intended for children under 13. We do not knowingly collect personal information from children under 13.
+      </p>
+
+      <h3>Changes to This Privacy Policy</h3>
+      <p class="meta" style="margin-top:-6px">
+        We may update this Privacy Policy from time to time by posting a new version and updating the “Last updated” date.
+        Continued use after changes constitutes acceptance.
+      </p>
+
+      <h3>Contact Us</h3>
+      <p class="meta" style="margin-top:-6px">
+        Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a><br/>
+        Address: [Your Company Address]<br/>
+        Phone: [Your Contact Phone]
+      </p>
+    </section>
+
+    <!-- ===================== TERMS ===================== -->
+    <section id="terms" class="section">
+      <h2>Terms of Service</h2>
+      <p class="meta">Last updated: December 31, 2024</p>
+
+      <h3>Agreement to Terms</h3>
+      <p class="meta" style="margin-top:-6px">
+        By accessing and using our Grocery Shopping Assistant mobile application (“the App”), you accept and agree to be bound by these Terms.
+        If you do not agree, please do not use this service.
+      </p>
+
+      <h3>Use License</h3>
+      <p class="meta" style="margin-top:-6px">
+        Permission is granted to temporarily download one copy of the App for personal, non-commercial viewing only.
+        This is a license, not a transfer of title, and under this license you may not:
+      </p>
+      <ul>
+        <li>Modify or copy the materials.</li>
+        <li>Use materials for any commercial purpose or for any public display.</li>
+        <li>Attempt to reverse engineer any software contained in the App.</li>
+        <li>Remove copyright or other proprietary notations.</li>
+        <li>Transfer materials to another person or “mirror” them on another server.</li>
+      </ul>
+
+      <h3>User Accounts</h3>
+      <p class="meta" style="margin-top:-6px">
+        To access certain features, you may create an account using Google or Apple authentication. You are responsible for:
+      </p>
+      <ul>
+        <li>Maintaining the security of your account.</li>
+        <li>All activities that occur under your account.</li>
+        <li>Providing accurate and complete information.</li>
+        <li>Promptly updating your account information.</li>
+        <li>Notifying us immediately of any unauthorized use.</li>
+      </ul>
+
+      <h3>Acceptable Use Policy</h3>
+      <p class="meta" style="margin-top:-6px">You agree not to:</p>
+      <ul>
+        <li>Violate any applicable laws or regulations.</li>
+        <li>Transmit any harmful or malicious code.</li>
+        <li>Attempt to gain unauthorized access to systems.</li>
+        <li>Interfere with or disrupt the App or servers.</li>
+        <li>Use the App for any fraudulent or unlawful purpose.</li>
+        <li>Collect user information without consent.</li>
+        <li>Impersonate any person or entity.</li>
+      </ul>
+
+      <h3>Service Availability</h3>
+      <p class="meta" style="margin-top:-6px">
+        We strive to provide consistent access but do not guarantee uninterrupted or error-free service.
+        We may modify, suspend, or discontinue any part of the service at any time.
+      </p>
+
+      <h3>Price Information Disclaimer</h3>
+      <p class="meta" style="margin-top:-6px">
+        Price information in the App is for informational purposes only. Actual prices may vary and change without notice.
+        We are not responsible for pricing errors or discrepancies. Always verify with retailers before purchasing.
+      </p>
+
+      <h3>Privacy</h3>
+      <p class="meta" style="margin-top:-6px">
+        Your privacy is important to us. Please review the Privacy Policy above, which also governs your use of the App.
+      </p>
+
+      <h3>Intellectual Property Rights</h3>
+      <p class="meta" style="margin-top:-6px">
+        The App and its original content, features, and functionality are the exclusive property of our company and its licensors.
+      </p>
+
+      <h3>User-Generated Content</h3>
+      <p class="meta" style="margin-top:-6px">
+        You retain rights to content you submit. By submitting content, you grant us a worldwide, non-exclusive, royalty-free license
+        to use it for providing and improving our services.
+      </p>
+
+      <h3>Disclaimer</h3>
+      <p class="meta" style="margin-top:-6px">
+        The App is provided on an “as is” basis. To the fullest extent permitted by law, we exclude warranties and conditions relating to the App.
+      </p>
+
+      <h3>Limitation of Liability</h3>
+      <p class="meta" style="margin-top:-6px">
+        To the fullest extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages.
+      </p>
+
+      <h3>Termination</h3>
+      <p class="meta" style="margin-top:-6px">
+        We may terminate or suspend access immediately, without prior notice, for any reason including violations of these Terms.
+      </p>
+
+      <h3>Governing Law</h3>
+      <p class="meta" style="margin-top:-6px">
+        These Terms shall be interpreted and governed by the laws of [Your Jurisdiction], without regard to conflict of law provisions.
+      </p>
+
+      <h3>Changes to Terms</h3>
+      <p class="meta" style="margin-top:-6px">
+        We may modify these Terms at any time. If changes are material, we may provide notice prior to new terms taking effect.
+      </p>
+
+      <h3>Contact Information</h3>
+      <p class="meta" style="margin-top:-6px">
+        Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a><br/>
+        Address: [Your Company Address]<br/>
+        Phone: [Your Contact Phone]
+      </p>
+    </section>
+
+    <footer class="footer">
       <div>
-        <a style="color:inherit" href="./support-index.html">Support</a>
+        <a href="./support/">Support</a>
         &nbsp;•&nbsp;
-        <a style="color:inherit" href="#privacy">Privacy</a>
-        &nbsp;•&nbsp;
-        <a style="color:inherit" href="#terms">Terms</a>
+        <a href="mailto:support@njdtech.org">support@njdtech.org</a>
       </div>
-      <div>© <span id="y"></span> Grocery Scout</div>
-    </div>
+      <div>© <span id="year"></span> Grocery Scout</div>
+    </footer>
   </div>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
