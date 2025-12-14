@@ -4,19 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
+
   <title>Prophecy Sports — Privacy Policy & Terms</title>
   <meta name="description" content="Prophecy Sports Privacy Policy, Terms of Service, and Disclaimer." />
+
+  <!-- Logo / Favicon -->
+  <link rel="icon" href="./IMG_0608.JPG" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="./IMG_0608.JPG" />
 
   <style>
     :root{
       --bg:#05060a;
-      --panel:#0c1020;
-      --panel2:rgba(12,16,32,.60);
+      --panel:rgba(12,16,32,.60);
       --text:#e9edf6;
       --muted:#a6b0c6;
       --line:rgba(255,255,255,.10);
-      --accent:#7c5cff;
-      --accent2:#f6c453;
       --danger:#ff4d4d;
       --radius:18px;
       --max:980px;
@@ -45,9 +47,13 @@
       color:inherit;
     }
     .logo{
-      width:44px; height:44px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(246,196,83,.70));
+      width:44px; height:44px;
+      border-radius:14px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.10);
       box-shadow: 0 12px 30px rgba(124,92,255,.25);
+      background: rgba(255,255,255,.03);
+      flex:0 0 auto;
     }
     .brand h1{margin:0; font-size:16px; letter-spacing:.2px}
     .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
@@ -56,7 +62,7 @@
     }
     .chip{
       text-decoration:none;
-      font-weight:700;
+      font-weight:800;
       font-size:13px;
       padding:10px 12px;
       border-radius:999px;
@@ -66,7 +72,7 @@
     .chip:hover{border-color: rgba(124,92,255,.55)}
     .hero{
       border:1px solid var(--line);
-      background: var(--panel2);
+      background: var(--panel);
       border-radius: calc(var(--radius) + 10px);
       box-shadow: var(--shadow);
       padding:18px;
@@ -78,7 +84,7 @@
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 14px;
       border-radius:14px;
-      font-weight:900;
+      font-weight:950;
       font-size:13px;
       text-decoration:none;
       border:1px solid rgba(124,92,255,.45);
@@ -87,7 +93,7 @@
     .btn.secondary{
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
-      font-weight:800;
+      font-weight:850;
     }
     .grid{
       display:grid;
@@ -136,15 +142,6 @@
       gap:10px;
       justify-content:space-between;
     }
-    .kbd{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size:12px;
-      padding:2px 6px;
-      border-radius:8px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color:var(--text);
-    }
   </style>
 </head>
 
@@ -152,7 +149,7 @@
   <div class="wrap">
     <header class="topbar">
       <a class="brand" href="./index.html" aria-label="Prophecy Sports Home">
-        <div class="logo" aria-hidden="true"></div>
+        <img class="logo" src="./IMG_0608.JPG" alt="Prophecy Sports logo" />
         <div>
           <h1>Prophecy Sports</h1>
           <p>Privacy Policy • Terms • Disclaimer</p>
@@ -171,7 +168,7 @@
       <h2>Prophecy Sports Legal Hub</h2>
       <p>
         This page contains our Privacy Policy, Terms of Service, and disclaimers for Prophecy Sports.
-        For help, visit <span class="kbd">/support/</span> or email <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
+        For help, visit <strong>/support/</strong> or email <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
       </p>
 
       <div class="ctaRow">
@@ -192,7 +189,7 @@
           <h3>Quick Contact</h3>
           <p>
             Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a><br/>
-            For urgent issues include your device model, iOS version, and app version.
+            For faster support include your device model, iOS version, and app version.
           </p>
         </div>
       </div>
@@ -203,76 +200,30 @@
       </div>
     </section>
 
-    <!-- ===================== PRIVACY ===================== -->
     <section id="privacy" class="section">
       <h2>Privacy Policy</h2>
       <p class="meta">Last updated: December 31, 2024</p>
 
-      <h3>Introduction</h3>
-      <p class="meta" style="margin-top:-6px">
-        This Privacy Policy explains how Prophecy Sports (“we”, “us”, “our”) collects, uses, discloses, and safeguards your information.
-      </p>
-
       <h3>Information We Collect</h3>
       <ul>
-        <li><strong>Account information</strong> (name, email address) when you sign in with Apple or Google (if enabled).</li>
-        <li><strong>Profile information</strong> you choose to provide.</li>
-        <li><strong>Usage information</strong> such as app interactions, feature usage, and device identifiers.</li>
+        <li><strong>Account information</strong> (name, email address) if you sign in with Apple or Google (if enabled).</li>
+        <li><strong>Usage information</strong> such as feature interactions and device identifiers.</li>
         <li><strong>Support communications</strong> (messages you send to support@njdtech.org).</li>
       </ul>
 
       <h3>How We Use Your Information</h3>
       <ul>
         <li>Provide and maintain app functionality.</li>
-        <li>Personalize your experience (where applicable).</li>
         <li>Improve performance, reliability, and user experience.</li>
         <li>Provide customer support and respond to requests.</li>
         <li>Comply with legal obligations and protect against misuse/fraud.</li>
       </ul>
 
-      <h3>Information Sharing and Disclosure</h3>
-      <p class="meta" style="margin-top:-6px">
-        We do not sell or rent personal information. We may share information only:
-      </p>
-      <ul>
-        <li>With your explicit consent.</li>
-        <li>To comply with legal obligations.</li>
-        <li>To protect rights, prevent fraud, or enforce policies.</li>
-        <li>With service providers assisting operations (under confidentiality obligations).</li>
-        <li>In connection with a business transfer or merger.</li>
-      </ul>
-
-      <h3>Data Security</h3>
-      <p class="meta" style="margin-top:-6px">
-        We use reasonable safeguards to protect information, but no method is 100% secure.
-      </p>
-
-      <h3>Data Retention</h3>
-      <p class="meta" style="margin-top:-6px">
-        We retain personal information only as long as necessary for the purposes described or as required by law.
-      </p>
-
       <h3>Your Rights</h3>
       <ul>
-        <li>Access and correct your information (where applicable).</li>
         <li>Request deletion of your account and associated data.</li>
-        <li>Opt-out of marketing communications (if any).</li>
+        <li>Request support or assistance related to your information.</li>
       </ul>
-
-      <h3>Third-Party Services</h3>
-      <p class="meta" style="margin-top:-6px">
-        If the app uses Apple/Google authentication, those providers have their own privacy policies.
-      </p>
-
-      <h3>Children’s Privacy</h3>
-      <p class="meta" style="margin-top:-6px">
-        This app is not intended for children under 13. We do not knowingly collect personal information from children under 13.
-      </p>
-
-      <h3>Changes</h3>
-      <p class="meta" style="margin-top:-6px">
-        We may update this policy by posting a new version and updating the “Last updated” date.
-      </p>
 
       <h3>Contact</h3>
       <p class="meta" style="margin-top:-6px">
@@ -280,15 +231,9 @@
       </p>
     </section>
 
-    <!-- ===================== TERMS ===================== -->
     <section id="terms" class="section">
       <h2>Terms of Service</h2>
       <p class="meta">Last updated: December 31, 2024</p>
-
-      <h3>Agreement to Terms</h3>
-      <p class="meta" style="margin-top:-6px">
-        By accessing or using Prophecy Sports (the “App”), you agree to be bound by these Terms. If you do not agree, do not use the App.
-      </p>
 
       <h3>Acceptable Use</h3>
       <ul>
@@ -296,23 +241,7 @@
         <li>Do not attempt unauthorized access to systems.</li>
         <li>Do not transmit malicious code.</li>
         <li>Do not interfere with service operation.</li>
-        <li>Do not impersonate any person or entity.</li>
       </ul>
-
-      <h3>Intellectual Property</h3>
-      <p class="meta" style="margin-top:-6px">
-        The App and its content are owned by us and/or licensors and protected by applicable laws.
-      </p>
-
-      <h3>Termination</h3>
-      <p class="meta" style="margin-top:-6px">
-        We may suspend or terminate access at our discretion for violations of these Terms.
-      </p>
-
-      <h3>Governing Law</h3>
-      <p class="meta" style="margin-top:-6px">
-        These Terms are governed by the laws of the applicable jurisdiction (to be specified as needed).
-      </p>
 
       <h3>Contact</h3>
       <p class="meta" style="margin-top:-6px">
@@ -320,7 +249,6 @@
       </p>
     </section>
 
-    <!-- ===================== DISCLAIMER ===================== -->
     <section id="disclaimer" class="section">
       <h2>Disclaimer</h2>
       <p class="meta" style="margin-top:-6px">
