@@ -2,206 +2,259 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prophecy Sports</title>
-  <meta name="description" content="Prophecy Sports — AI-powered sports analysis and odds comparison for informational and entertainment purposes only." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Prophecy Sports — Support & Legal</title>
+  <meta name="description" content="Prophecy Sports — AI-powered sports insights (informational & entertainment only). Support, privacy policy, terms, and legal disclaimer." />
   <style>
     :root{
-      --bg:#070B12;
-      --card:#0D1320;
-      --card2:#0B1020;
-      --text:#EAF0FF;
-      --muted:rgba(234,240,255,.72);
-      --border:rgba(255,255,255,.10);
-      --accent:#6EE7B7;   /* green */
-      --warn:#FB7185;     /* red/pink */
-      --gold:#FBBF24;     /* gold */
-      --link:#7DD3FC;     /* sky */
+      --bg:#05060a;
+      --panel:#0c1020;
+      --panel2:#0a0d18;
+      --text:#e9edf6;
+      --muted:#a6b0c6;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --good:#38d996;
+      --warn:#ff4d4d;
+      --gold:#f6c453;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --radius: 18px;
+      --max: 980px;
+      font-synthesis-weight:none;
     }
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
-      background: radial-gradient(1000px 500px at 20% 10%, rgba(110,231,183,.12), transparent 55%),
-                  radial-gradient(900px 450px at 75% 15%, rgba(125,211,252,.10), transparent 55%),
-                  radial-gradient(800px 400px at 50% 95%, rgba(251,191,36,.08), transparent 60%),
-                  var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% 10%, rgba(124,92,255,.18), transparent 60%),
+                  radial-gradient(900px 600px at 80% 0%, rgba(246,196,83,.12), transparent 55%),
+                  linear-gradient(180deg, var(--bg), #070814 60%, #05060a);
       color:var(--text);
-      padding:48px 16px;
+      line-height:1.55;
     }
-    .wrap{ max-width:980px; margin:0 auto; }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 44px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:10px 0 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; text-decoration:none;
+    }
+    .logo{
+      width:42px; height:42px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(246,196,83,.75));
+      box-shadow: 0 12px 30px rgba(124,92,255,.25);
+    }
+    .brand h1{font-size:16px; margin:0; letter-spacing:.2px}
+    .brand p{margin:0; font-size:12px; color:var(--muted)}
+    .nav{display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end}
+    .chip{
+      text-decoration:none;
+      padding:10px 12px; border:1px solid var(--line);
+      border-radius:999px; background: rgba(255,255,255,.03);
+      color:var(--text); font-size:13px;
+    }
+    .chip:hover{border-color: rgba(124,92,255,.55)}
     .hero{
-      display:flex; gap:18px; flex-wrap:wrap;
-      align-items:flex-end; justify-content:space-between;
-      padding:26px 24px;
-      border:1px solid var(--border);
-      border-radius:18px;
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      box-shadow: var(--shadow);
+      padding:26px;
+      overflow:hidden;
+      position:relative;
     }
-    h1{ margin:0; font-size:44px; letter-spacing:.2px; }
-    .tag{ font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); display:flex; gap:10px; align-items:center; }
-    .dot{ width:8px; height:8px; border-radius:999px; background:var(--accent); box-shadow:0 0 0 4px rgba(110,231,183,.12); }
-    .sub{ margin:10px 0 0; color:var(--muted); max-width:760px; line-height:1.45; }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(500px 240px at 20% 0%, rgba(124,92,255,.22), transparent 60%),
+                  radial-gradient(520px 260px at 80% 10%, rgba(246,196,83,.14), transparent 60%);
+      pointer-events:none;
+      opacity:.9;
+    }
+    .hero > *{position:relative}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px; border:1px solid var(--line);
+      border-radius:999px; background: rgba(12,16,32,.60);
+      font-size:12px; color:var(--muted);
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:var(--good); box-shadow:0 0 0 6px rgba(56,217,150,.12)}
+    h2{margin:14px 0 8px; font-size:30px; letter-spacing:.2px}
+    .sub{margin:0; color:var(--muted); max-width:72ch}
     .grid{
-      margin-top:16px;
       display:grid;
-      grid-template-columns:repeat(12, 1fr);
-      gap:14px;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      margin-top:18px;
+    }
+    @media (max-width: 880px){
+      .grid{grid-template-columns:1fr}
+      .nav{justify-content:flex-start}
     }
     .card{
-      grid-column:span 12;
-      border:1px solid var(--border);
-      border-radius:18px;
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
-      padding:18px 18px;
+      border:1px solid var(--line);
+      background: rgba(12,16,32,.55);
+      border-radius: var(--radius);
+      padding:18px;
     }
-    @media (min-width: 900px){
-      .card.half{ grid-column:span 6; }
-      .card.third{ grid-column:span 4; }
-    }
-    .card h2{ margin:0 0 10px; font-size:18px; }
-    .card p{ margin:0; color:var(--muted); line-height:1.55; }
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted)}
+    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
     .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 12px;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
       border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.02);
-      color:var(--text);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
       text-decoration:none;
+      font-weight:600;
+      font-size:13px;
     }
-    .btn:hover{ background:rgba(255,255,255,.04); text-decoration:none; }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.02);
-      color:var(--muted);
-      font-size:12px;
+    .btn.primary{
+      border-color: rgba(124,92,255,.45);
+      background: linear-gradient(180deg, rgba(124,92,255,.18), rgba(124,92,255,.08));
     }
-    .warnbox{
-      border:1px solid rgba(251,113,133,.35);
-      background:linear-gradient(180deg, rgba(251,113,133,.10), rgba(251,113,133,.04));
-      padding:14px 14px;
-      border-radius:16px;
-      margin-top:14px;
+    .btn.warn{
+      border-color: rgba(255,77,77,.40);
+      background: linear-gradient(180deg, rgba(255,77,77,.18), rgba(255,77,77,.06));
     }
-    .warnbox strong{ color:#FFD1D9; }
-    ul{ margin:10px 0 0 18px; color:var(--muted); line-height:1.6; }
+    .notice{
+      margin-top:16px;
+      border-left:4px solid var(--warn);
+      padding:12px 14px;
+      border-radius: 14px;
+      background: rgba(255,77,77,.08);
+      border:1px solid rgba(255,77,77,.20);
+    }
+    .notice strong{display:block; margin-bottom:6px}
     .footer{
-      margin-top:18px;
-      color:rgba(234,240,255,.55);
-      font-size:12px;
+      margin-top:26px; color:var(--muted); font-size:12px;
+      border-top:1px solid var(--line); padding-top:18px;
       display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
-      padding:0 4px;
     }
-    code{ background:rgba(255,255,255,.08); padding:2px 6px; border-radius:8px; }
+    .links a{color:var(--muted); text-decoration:none; margin-right:12px}
+    .links a:hover{color:var(--text)}
+    code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--line)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="hero">
-      <div>
-        <div class="tag"><span class="dot"></span> AI Sports Intelligence</div>
-        <h1>Prophecy Sports</h1>
-        <p class="sub">
-          AI-powered sports predictions, odds comparison, and game insights — designed for
-          <strong>informational and entertainment purposes only</strong>.
-        </p>
-
-        <div class="btnrow">
-          <a class="btn" href="./support/">Support</a>
-          <!-- Add these pages later if you want -->
-          <!-- <a class="btn" href="./privacy/">Privacy Policy</a>
-          <a class="btn" href="./terms/">Terms</a>
-          <a class="btn" href="./legal/">Legal Disclaimer</a> -->
+    <div class="topbar">
+      <a class="brand" href="./index.html" aria-label="Prophecy Sports Home">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Prophecy Sports</h1>
+          <p>Support & legal information</p>
         </div>
+      </a>
 
-        <div class="warnbox">
-          <strong>Important:</strong> Prophecy Sports is <strong>not</strong> a gambling platform.
-          We do not accept bets, process wagers, or operate as a sportsbook.
-        </div>
-      </div>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
-        <span class="pill">Odds comparison</span>
-        <span class="pill">Game insights</span>
-        <span class="pill">AI predictions</span>
-        <span class="pill">Stats & trends</span>
-      </div>
+      <nav class="nav" aria-label="Primary">
+        <a class="chip" href="./support-index.html">Support</a>
+        <a class="chip" href="#privacy">Privacy</a>
+        <a class="chip" href="#terms">Terms</a>
+        <a class="chip" href="#disclaimer">Disclaimer</a>
+      </nav>
     </div>
 
-    <div class="grid">
-      <div class="card half">
-        <h2>What Prophecy Sports Provides</h2>
-        <p>
-          Data-driven analysis across major sports, including AI-generated predictions, statistical breakdowns,
-          and odds comparisons from third-party sources (e.g., major sportsbooks).
-        </p>
-        <ul>
-          <li>AI-generated predictions & recommendations (informational)</li>
-          <li>Odds comparison from third-party sources</li>
-          <li>Matchup insights, trends, and key stats</li>
-          <li>Clean UI built for speed and clarity</li>
-        </ul>
-      </div>
+    <section class="hero" aria-label="Hero">
+      <span class="kicker"><span class="dot"></span> Your data, your rights • Informational & entertainment only</span>
+      <h2>Prophecy Sports</h2>
+      <p class="sub">
+        AI-powered sports insights, odds comparisons, and game analysis — designed to help you make smarter decisions.
+        <strong>Prophecy Sports does not accept wagers, process gambling transactions, or operate as a sportsbook.</strong>
+      </p>
 
-      <div class="card half">
-        <h2>What Prophecy Sports Does Not Do</h2>
-        <p>
-          We do not facilitate gambling. We do not accept wagers, process bets, or pay out winnings.
-          Any decisions you make are your responsibility.
-        </p>
-        <ul>
-          <li>No wagering, bets, stakes, or gambling transactions</li>
-          <li>No sportsbook, casino, or gambling operator services</li>
-          <li>No guarantees of outcomes or financial results</li>
-          <li>No investment/financial/legal advice</li>
-        </ul>
-      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Quick links</h3>
+          <p>Use these for App Store fields (Support URL, Privacy Policy URL) and for users who need help fast.</p>
+          <div class="btnrow">
+            <a class="btn primary" href="./support-index.html">Open Support Page</a>
+            <a class="btn" href="#privacy">Privacy Policy</a>
+            <a class="btn" href="#terms">Terms of Service</a>
+            <a class="btn warn" href="#disclaimer">Legal Disclaimer</a>
+          </div>
 
-      <div class="card third">
-        <h2>Support</h2>
-        <p>
-          Need help? Visit the support page or email us directly.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="./support/">Open Support</a>
-          <a class="btn" href="mailto:support@prophecy.ai">Email Support</a>
+          <div class="notice" role="note">
+            <strong>Important</strong>
+            All picks, odds information, and analysis are for informational purposes only and do not constitute gambling advice,
+            financial advice, or any other form of professional advice.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Contact</h3>
+          <p>
+            Support email: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+          </p>
+          <p style="margin-top:10px">
+            If you’re reporting a bug, include your device model, iOS version, app version, and a screenshot.
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="card third">
-        <h2>Responsible Use</h2>
-        <p>
-          If you or someone you know may have a gambling problem, consider reaching out for help.
-        </p>
-        <ul>
-          <li>US Helpline: <a href="tel:18005224700">1-800-522-4700</a></li>
-          <li>NCPG: <a href="https://www.ncpgambling.org" target="_blank" rel="noopener">ncpgambling.org</a></li>
-          <li>Gamblers Anonymous: <a href="https://www.gamblersanonymous.org" target="_blank" rel="noopener">gamblersanonymous.org</a></li>
-        </ul>
-      </div>
+    <section id="privacy" style="margin-top:18px" class="card" aria-label="Privacy Policy">
+      <h3>Privacy Policy (summary)</h3>
+      <p>
+        This page is a concise summary. For full in-app policy text, keep using your app’s Privacy Policy screen.
+        Typical data categories may include account data (name/email/auth tokens), device/usage data, and support communications.
+        If you use SSO (Apple/Google), you receive basic profile details from the identity provider.
+      </p>
+      <p style="margin-top:10px; color:var(--muted)">
+        Replace this block with your full Privacy Policy text later if you want this site to be the canonical copy.
+      </p>
+    </section>
 
-      <div class="card third">
-        <h2>Legal / Policies</h2>
-        <p>
-          You can mirror your in-app Privacy Policy, Terms, and Legal Disclaimer on GitHub Pages for App Review clarity.
-        </p>
-        <p class="sub" style="margin:10px 0 0;">
-          Next step: add <code>/privacy</code>, <code>/terms</code>, <code>/legal</code> pages (optional, but recommended).
-        </p>
+    <section id="terms" style="margin-top:14px" class="card" aria-label="Terms of Service">
+      <h3>Terms of Service (summary)</h3>
+      <p>
+        By using Prophecy Sports, users agree to the terms, including disclaimers, limitations of liability,
+        and eligibility requirements. Prophecy Sports is not a gambling platform and does not facilitate betting.
+        Subscriptions (if any) are managed through the App Store and subject to Apple’s terms.
+      </p>
+      <p style="margin-top:10px; color:var(--muted)">
+        Add your full Terms text here later, or keep the canonical copy in-app and link here for support.
+      </p>
+    </section>
+
+    <section id="disclaimer" style="margin-top:14px" class="card" aria-label="Legal Disclaimer">
+      <h3>Legal Disclaimer (high visibility)</h3>
+      <div class="notice" role="note" style="border-left-color: var(--warn);">
+        <strong>Prophecy Sports is NOT a gambling platform.</strong>
+        We do not accept bets, process wagers, or operate as a sportsbook.
       </div>
-    </div>
+      <p style="margin-top:10px">
+        Prophecy Sports provides sports analysis, statistics, predictions, and related informational content for
+        <strong>entertainment and educational purposes only</strong>. Past performance is not indicative of future results,
+        and no outcome is guaranteed.
+      </p>
+      <p style="margin-top:10px">
+        If you or someone you know has a gambling problem, seek help:
+        <br/>• National Problem Gambling Helpline: <a href="tel:18005224700">1-800-522-4700</a>
+        <br/>• National Council on Problem Gambling: <span style="color:var(--muted)">ncpgambling.org</span>
+      </p>
+      <p style="margin-top:10px; color:var(--muted)">
+        Contact: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+      </p>
+    </section>
 
     <div class="footer">
-      <div>© 2025 Prophecy Sports</div>
-      <div>Last updated: <code>2025-12-14</code></div>
+      <div class="links">
+        <a href="./support-index.html">Support</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#disclaimer">Disclaimer</a>
+      </div>
+      <div>© <span id="y"></span> Prophecy Sports. All rights reserved.</div>
     </div>
   </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
