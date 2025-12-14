@@ -4,160 +4,359 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-  <title>Prophecy Sports — Support</title>
-  <meta name="description" content="Prophecy Sports support page. Contact, FAQs, and links to privacy policy, terms, and legal disclaimer." />
+  <title>Prophecy Sports — Privacy Policy & Terms</title>
+  <meta name="description" content="Prophecy Sports Privacy Policy, Terms of Service, and Disclaimer." />
+
   <style>
     :root{
-      --bg:#05060a; --panel:#0c1020; --text:#e9edf6; --muted:#a6b0c6;
-      --line:rgba(255,255,255,.10); --accent:#7c5cff; --good:#38d996; --warn:#ff4d4d;
-      --radius:18px; --max:900px; --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --bg:#05060a;
+      --panel:#0c1020;
+      --panel2:rgba(12,16,32,.60);
+      --text:#e9edf6;
+      --muted:#a6b0c6;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#f6c453;
+      --danger:#ff4d4d;
+      --radius:18px;
+      --max:980px;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 700px at 20% 10%, rgba(124,92,255,.18), transparent 60%),
-                  linear-gradient(180deg, var(--bg), #070814 60%, #05060a);
-      color:var(--text); line-height:1.55;
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(124,92,255,.20), transparent 60%),
+        radial-gradient(900px 600px at 85% 25%, rgba(246,196,83,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg), #070814 60%, #05060a);
+      color:var(--text);
+      line-height:1.55;
     }
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 48px;}
-    .head{
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 54px;}
+    .topbar{
       display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
       margin-bottom:14px;
     }
-    .title{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
-    .logo{width:42px; height:42px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(246,196,83,.75));
+    .brand{
+      display:flex; align-items:center; gap:12px; text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(246,196,83,.70));
       box-shadow: 0 12px 30px rgba(124,92,255,.25);
     }
-    h1{margin:0; font-size:18px}
-    .sub{margin:0; color:var(--muted); font-size:12px}
-    .chiprow{display:flex; flex-wrap:wrap; gap:10px}
+    .brand h1{margin:0; font-size:16px; letter-spacing:.2px}
+    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+    .nav{
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
     .chip{
-      text-decoration:none; color:inherit; font-size:13px; font-weight:600;
-      padding:10px 12px; border:1px solid var(--line);
-      border-radius:999px; background: rgba(255,255,255,.03);
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
     }
     .chip:hover{border-color: rgba(124,92,255,.55)}
-    .panel{
+    .hero{
       border:1px solid var(--line);
-      background: rgba(12,16,32,.55);
-      border-radius: calc(var(--radius) + 8px);
-      padding:20px;
+      background: var(--panel2);
+      border-radius: calc(var(--radius) + 10px);
       box-shadow: var(--shadow);
+      padding:18px;
     }
-    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
-    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
-    .card{border:1px solid var(--line); border-radius:var(--radius); padding:16px; background: rgba(255,255,255,.02)}
-    .card h2{margin:0 0 8px; font-size:15px}
-    .card p{margin:0; color:var(--muted)}
+    .hero h2{margin:0 0 6px; font-size:18px}
+    .hero p{margin:0; color:var(--muted)}
+    .ctaRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      margin-top:12px;
-      padding:12px 14px; border-radius:14px;
-      border:1px solid rgba(124,92,255,.45);
-      background: linear-gradient(180deg, rgba(124,92,255,.18), rgba(124,92,255,.08));
-      text-decoration:none; color:var(--text); font-weight:800; font-size:13px;
-    }
-    details{
-      margin-top:12px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px 12px;
-      background: rgba(255,255,255,.02);
-    }
-    summary{cursor:pointer; font-weight:700}
-    details p{margin:10px 0 0; color:var(--muted)}
-    .notice{
-      margin-top:14px;
-      border-left:4px solid var(--warn);
       padding:12px 14px;
       border-radius:14px;
+      font-weight:900;
+      font-size:13px;
+      text-decoration:none;
+      border:1px solid rgba(124,92,255,.45);
+      background: linear-gradient(180deg, rgba(124,92,255,.18), rgba(124,92,255,.08));
+    }
+    .btn.secondary{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-weight:800;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.02);
+      padding:16px;
+    }
+    .card h3{margin:0 0 8px; font-size:14px}
+    .card p{margin:0; color:var(--muted)}
+    .section{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 10px);
+      background: rgba(12,16,32,.55);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .section h2{margin:0 0 8px; font-size:16px}
+    .meta{color:var(--muted); font-size:12px; margin:0 0 12px}
+    ul{margin:10px 0 0 18px}
+    li{margin:6px 0; color:var(--muted)}
+    .note{
+      margin-top:12px;
+      border-left:4px solid var(--danger);
       background: rgba(255,77,77,.08);
       border:1px solid rgba(255,77,77,.20);
+      border-radius:14px;
+      padding:12px 14px;
+      color:var(--text);
     }
     .footer{
-      margin-top:18px; color:var(--muted); font-size:12px;
-      border-top:1px solid var(--line); padding-top:14px;
-      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
     }
-    code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--line)}
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12px;
+      padding:2px 6px;
+      border-radius:8px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div class="head">
-      <a class="title" href="./index.html" aria-label="Back to Prophecy Sports home">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Prophecy Sports Home">
         <div class="logo" aria-hidden="true"></div>
         <div>
-          <h1>Prophecy Sports — Support</h1>
-          <p class="sub">Help, contact, FAQs, and legal links</p>
+          <h1>Prophecy Sports</h1>
+          <p>Privacy Policy • Terms • Disclaimer</p>
         </div>
       </a>
-      <div class="chiprow">
-        <a class="chip" href="./index.html">Home</a>
-        <a class="chip" href="./index.html#privacy">Privacy</a>
-        <a class="chip" href="./index.html#terms">Terms</a>
-        <a class="chip" href="./index.html#disclaimer">Disclaimer</a>
-      </div>
-    </div>
 
-    <section class="panel">
-      <p style="margin:0; color:var(--muted)">
-        For the App Store “Support URL”, you can use this page directly:
-        <code>.../prophecysports/support-index.html</code>
+      <nav class="nav" aria-label="Primary">
+        <a class="chip" href="#privacy">Privacy</a>
+        <a class="chip" href="#terms">Terms</a>
+        <a class="chip" href="#disclaimer">Disclaimer</a>
+        <a class="chip" href="./support/">Support</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Prophecy Sports Legal Hub</h2>
+      <p>
+        This page contains our Privacy Policy, Terms of Service, and disclaimers for Prophecy Sports.
+        For help, visit <span class="kbd">/support/</span> or email <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
       </p>
+
+      <div class="ctaRow">
+        <a class="btn" href="./support/">Open Support Page</a>
+        <a class="btn secondary" href="#privacy">View Privacy</a>
+        <a class="btn secondary" href="#terms">View Terms</a>
+      </div>
 
       <div class="grid">
         <div class="card">
-          <h2>Contact Support</h2>
-          <p>Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a></p>
-          <p style="margin-top:8px">
-            Include: device model, iOS version, app version, and what you expected vs what happened.
-          </p>
-          <a class="btn" href="mailto:support@njdtech.org?subject=Prophecy%20Sports%20Support%20Request">Email Support</a>
-        </div>
-
-        <div class="card">
-          <h2>Subscriptions & Billing</h2>
+          <h3>What we are</h3>
           <p>
-            If you have a subscription, billing is handled by Apple. You can manage or cancel in
-            <code>Settings → Apple ID → Subscriptions</code>.
+            Prophecy Sports provides informational and entertainment content related to sports analysis.
+            We do not accept wagers and we are not a sportsbook.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Quick Contact</h3>
+          <p>
+            Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a><br/>
+            For urgent issues include your device model, iOS version, and app version.
           </p>
         </div>
       </div>
 
-      <details>
-        <summary>FAQ: Is Prophecy Sports a sportsbook?</summary>
-        <p>No. Prophecy Sports is informational/entertainment only. We do not accept bets, process wagers, or operate as a sportsbook.</p>
-      </details>
-
-      <details>
-        <summary>FAQ: My odds/picks look off — what should I send support?</summary>
-        <p>Send the league, matchup, time (with timezone), sportsbook shown, and a screenshot. If possible, include your region/state because odds feeds can vary.</p>
-      </details>
-
-      <details>
-        <summary>FAQ: How do I request account deletion?</summary>
-        <p>Email <a href="mailto:support@njdtech.org">support@njdtech.org</a> from the email associated with your account and request deletion (or use in-app deletion if available).</p>
-      </details>
-
-      <div class="notice" role="note">
-        <strong style="display:block; margin-bottom:6px">Important Disclaimer</strong>
-        All content is for informational and entertainment purposes only and does not constitute gambling advice, financial advice, or any other professional advice.
-      </div>
-
-      <div class="footer">
-        <div>
-          National Problem Gambling Helpline: <a href="tel:18005224700">1-800-522-4700</a>
-        </div>
-        <div>© <span id="y"></span> Prophecy Sports</div>
+      <div class="note" role="note">
+        <strong>Responsible Gaming:</strong> If you or someone you know has a gambling problem, call
+        <a href="tel:18005224700">1-800-522-4700</a>.
       </div>
     </section>
+
+    <!-- ===================== PRIVACY ===================== -->
+    <section id="privacy" class="section">
+      <h2>Privacy Policy</h2>
+      <p class="meta">Last updated: December 31, 2024</p>
+
+      <h3>Introduction</h3>
+      <p class="meta" style="margin-top:-6px">
+        This Privacy Policy explains how Prophecy Sports (“we”, “us”, “our”) collects, uses, discloses, and safeguards your information.
+      </p>
+
+      <h3>Information We Collect</h3>
+      <ul>
+        <li><strong>Account information</strong> (name, email address) when you sign in with Apple or Google (if enabled).</li>
+        <li><strong>Profile information</strong> you choose to provide.</li>
+        <li><strong>Usage information</strong> such as app interactions, feature usage, and device identifiers.</li>
+        <li><strong>Support communications</strong> (messages you send to support@njdtech.org).</li>
+      </ul>
+
+      <h3>How We Use Your Information</h3>
+      <ul>
+        <li>Provide and maintain app functionality.</li>
+        <li>Personalize your experience (where applicable).</li>
+        <li>Improve performance, reliability, and user experience.</li>
+        <li>Provide customer support and respond to requests.</li>
+        <li>Comply with legal obligations and protect against misuse/fraud.</li>
+      </ul>
+
+      <h3>Information Sharing and Disclosure</h3>
+      <p class="meta" style="margin-top:-6px">
+        We do not sell or rent personal information. We may share information only:
+      </p>
+      <ul>
+        <li>With your explicit consent.</li>
+        <li>To comply with legal obligations.</li>
+        <li>To protect rights, prevent fraud, or enforce policies.</li>
+        <li>With service providers assisting operations (under confidentiality obligations).</li>
+        <li>In connection with a business transfer or merger.</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <p class="meta" style="margin-top:-6px">
+        We use reasonable safeguards to protect information, but no method is 100% secure.
+      </p>
+
+      <h3>Data Retention</h3>
+      <p class="meta" style="margin-top:-6px">
+        We retain personal information only as long as necessary for the purposes described or as required by law.
+      </p>
+
+      <h3>Your Rights</h3>
+      <ul>
+        <li>Access and correct your information (where applicable).</li>
+        <li>Request deletion of your account and associated data.</li>
+        <li>Opt-out of marketing communications (if any).</li>
+      </ul>
+
+      <h3>Third-Party Services</h3>
+      <p class="meta" style="margin-top:-6px">
+        If the app uses Apple/Google authentication, those providers have their own privacy policies.
+      </p>
+
+      <h3>Children’s Privacy</h3>
+      <p class="meta" style="margin-top:-6px">
+        This app is not intended for children under 13. We do not knowingly collect personal information from children under 13.
+      </p>
+
+      <h3>Changes</h3>
+      <p class="meta" style="margin-top:-6px">
+        We may update this policy by posting a new version and updating the “Last updated” date.
+      </p>
+
+      <h3>Contact</h3>
+      <p class="meta" style="margin-top:-6px">
+        Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+      </p>
+    </section>
+
+    <!-- ===================== TERMS ===================== -->
+    <section id="terms" class="section">
+      <h2>Terms of Service</h2>
+      <p class="meta">Last updated: December 31, 2024</p>
+
+      <h3>Agreement to Terms</h3>
+      <p class="meta" style="margin-top:-6px">
+        By accessing or using Prophecy Sports (the “App”), you agree to be bound by these Terms. If you do not agree, do not use the App.
+      </p>
+
+      <h3>Acceptable Use</h3>
+      <ul>
+        <li>Do not violate laws or regulations.</li>
+        <li>Do not attempt unauthorized access to systems.</li>
+        <li>Do not transmit malicious code.</li>
+        <li>Do not interfere with service operation.</li>
+        <li>Do not impersonate any person or entity.</li>
+      </ul>
+
+      <h3>Intellectual Property</h3>
+      <p class="meta" style="margin-top:-6px">
+        The App and its content are owned by us and/or licensors and protected by applicable laws.
+      </p>
+
+      <h3>Termination</h3>
+      <p class="meta" style="margin-top:-6px">
+        We may suspend or terminate access at our discretion for violations of these Terms.
+      </p>
+
+      <h3>Governing Law</h3>
+      <p class="meta" style="margin-top:-6px">
+        These Terms are governed by the laws of the applicable jurisdiction (to be specified as needed).
+      </p>
+
+      <h3>Contact</h3>
+      <p class="meta" style="margin-top:-6px">
+        Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+      </p>
+    </section>
+
+    <!-- ===================== DISCLAIMER ===================== -->
+    <section id="disclaimer" class="section">
+      <h2>Disclaimer</h2>
+      <p class="meta" style="margin-top:-6px">
+        Prophecy Sports content is provided for informational and entertainment purposes only.
+        Nothing in the App constitutes betting advice, gambling advice, financial advice, or professional advice.
+      </p>
+
+      <h3>No Guarantees</h3>
+      <ul>
+        <li>Outcomes are uncertain. Past performance is not indicative of future results.</li>
+        <li>We make no guarantees regarding accuracy, completeness, or usefulness of information.</li>
+      </ul>
+
+      <h3>Limitation of Liability</h3>
+      <p class="meta" style="margin-top:-6px">
+        To the fullest extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages.
+      </p>
+
+      <div class="note">
+        <strong>Help available:</strong> National Problem Gambling Helpline:
+        <a href="tel:18005224700">1-800-522-4700</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <a href="./support/">Support</a>
+        &nbsp;•&nbsp;
+        <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+      </div>
+      <div>© <span id="year"></span> Prophecy Sports</div>
+    </footer>
   </div>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
