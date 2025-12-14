@@ -5,45 +5,43 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <title>Grocery Scout — Support</title>
-  <meta name="description" content="Grocery Scout support page: contact, FAQs, and links to privacy policy and terms." />
+  <meta name="description" content="Grocery Scout support page: contact, FAQs, and legal links." />
   <style>
     :root{
-      --bg:#0b0f0e; --text:#e8f3ee; --muted:#a3c0b4;
-      --line:rgba(255,255,255,.10); --accent:#28c76f; --radius:18px; --max:900px;
-      --shadow:0 18px 60px rgba(0,0,0,.55);
+      --bg:#0b0f0e; --panel:rgba(17,24,23,.72);
+      --text:#e8f3ee; --muted:#a3c0b4; --line:rgba(255,255,255,.10);
+      --accent:#28c76f; --radius:18px; --max:900px; --shadow:0 18px 60px rgba(0,0,0,.55);
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(900px 650px at 20% 10%, rgba(40,199,111,.15), transparent 60%),
+      background: radial-gradient(1000px 700px at 20% 10%, rgba(40,199,111,.16), transparent 60%),
                   linear-gradient(180deg, var(--bg), #070b0b 65%, #050707);
       color:var(--text); line-height:1.55;
     }
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 48px;}
-    .head{
-      display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
-      margin-bottom:14px;
-    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 48px;}
+    .head{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px;}
     .title{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
     .logo{
       width:42px; height:42px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(40,199,111,.9), rgba(40,199,111,.35));
-      box-shadow: 0 12px 30px rgba(40,199,111,.18);
+      background: linear-gradient(135deg, rgba(40,199,111,.92), rgba(40,199,111,.35));
       border:1px solid rgba(255,255,255,.08);
+      box-shadow: 0 12px 30px rgba(40,199,111,.18);
     }
     h1{margin:0; font-size:18px}
-    .sub{margin:0; font-size:12px; color:var(--muted)}
+    .sub{margin:0; color:var(--muted); font-size:12px}
     .chiprow{display:flex; flex-wrap:wrap; gap:10px}
     .chip{
-      text-decoration:none; color:inherit; font-size:13px; font-weight:700;
+      text-decoration:none; color:inherit; font-size:13px; font-weight:800;
       padding:10px 12px; border:1px solid var(--line);
       border-radius:999px; background: rgba(255,255,255,.03);
     }
-    .chip:hover{border-color: rgba(40,199,111,.55)}
+    .chip:hover{border-color: rgba(40,199,111,.60)}
     .panel{
       border:1px solid var(--line);
-      background: rgba(17,24,23,.70);
+      background: var(--panel);
       border-radius: calc(var(--radius) + 8px);
       padding:20px;
       box-shadow: var(--shadow);
@@ -59,7 +57,7 @@
       padding:12px 14px; border-radius:14px;
       border:1px solid rgba(40,199,111,.45);
       background: linear-gradient(180deg, rgba(40,199,111,.15), rgba(40,199,111,.06));
-      text-decoration:none; color:var(--text); font-weight:900; font-size:13px;
+      text-decoration:none; color:var(--text); font-weight:950; font-size:13px;
     }
     details{
       margin-top:12px;
@@ -68,20 +66,19 @@
       padding:12px 12px;
       background: rgba(255,255,255,.02);
     }
-    summary{cursor:pointer; font-weight:800}
+    summary{cursor:pointer; font-weight:900}
     details p{margin:10px 0 0; color:var(--muted)}
     .footer{
-      margin-top:16px; color:var(--muted); font-size:12px;
+      margin-top:18px; color:var(--muted); font-size:12px;
       border-top:1px solid var(--line); padding-top:14px;
       display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
     }
-    code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--line)}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="head">
-      <a class="title" href="./index.html" aria-label="Back to Grocery Scout home">
+      <a class="title" href="../index.html" aria-label="Back to Grocery Scout home">
         <div class="logo" aria-hidden="true"></div>
         <div>
           <h1>Grocery Scout — Support</h1>
@@ -89,54 +86,48 @@
         </div>
       </a>
       <div class="chiprow">
-        <a class="chip" href="./index.html">Home</a>
-        <a class="chip" href="./index.html#privacy">Privacy</a>
-        <a class="chip" href="./index.html#terms">Terms</a>
+        <a class="chip" href="../index.html">Home</a>
+        <a class="chip" href="../index.html#about">About</a>
+        <a class="chip" href="../index.html#privacy">Privacy</a>
+        <a class="chip" href="../index.html#terms">Terms</a>
       </div>
     </div>
 
     <section class="panel">
-      <p style="margin:0; color:var(--muted)">
-        For the App Store “Support URL”, you can use:
-        <code>.../groceryscout/support-index.html</code>
-      </p>
-
       <div class="grid">
         <div class="card">
-          <h2>Contact</h2>
+          <h2>Contact Support</h2>
           <p>Email: <a href="mailto:support@njdtech.org">support@njdtech.org</a></p>
+          <p style="margin-top:8px">Include device model, iOS version, app version, and steps to reproduce.</p>
           <a class="btn" href="mailto:support@njdtech.org?subject=Grocery%20Scout%20Support%20Request">Email Support</a>
         </div>
 
         <div class="card">
           <h2>Data Requests</h2>
-          <p>
-            If you want account deletion or a copy of your data, email from your account email and specify:
-            “Delete my account” or “Export my data”.
-          </p>
+          <p>For deletion or export, email support from the email associated with your account and specify your request.</p>
         </div>
       </div>
 
       <details>
-        <summary>FAQ: Why do prices differ from what I see in-store?</summary>
-        <p>Prices can change and vary by location, availability, promotions, and retailer updates. Always verify with the retailer before purchasing.</p>
+        <summary>FAQ: Why are prices different than in-store?</summary>
+        <p>Prices can vary by location, availability, promotions, and retailer updates. Always verify with the retailer before purchasing.</p>
       </details>
 
       <details>
-        <summary>FAQ: Location access — is it required?</summary>
-        <p>No. Location is used only with permission to improve nearby store recommendations and location-based comparisons.</p>
+        <summary>FAQ: Is location required?</summary>
+        <p>No. Location is optional and used only with permission for nearby stores and location-based comparisons.</p>
       </details>
 
       <details>
-        <summary>FAQ: How do I stop notifications?</summary>
-        <p>Disable notifications in iOS Settings → Notifications → Grocery Scout, and/or in-app preferences if available.</p>
+        <summary>FAQ: How do I disable notifications?</summary>
+        <p>Disable notifications in iOS Settings → Notifications → Grocery Scout (and/or in-app preferences if available).</p>
       </details>
 
       <div class="footer">
         <div>
-          <a style="color:inherit" href="./index.html#privacy">Privacy Policy</a>
+          <a href="../index.html#privacy">Privacy Policy</a>
           &nbsp;•&nbsp;
-          <a style="color:inherit" href="./index.html#terms">Terms of Service</a>
+          <a href="../index.html#terms">Terms of Service</a>
         </div>
         <div>© <span id="y"></span> Grocery Scout</div>
       </div>
