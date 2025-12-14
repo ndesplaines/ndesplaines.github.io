@@ -4,13 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
+
   <title>Grocery Scout — Support</title>
   <meta name="description" content="Grocery Scout support page: contact, FAQs, and legal links." />
+
+  <!-- Logo / Favicon -->
+  <link rel="icon" href="../ISIMG-981388.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="../ISIMG-981388.jpg" />
+
   <style>
     :root{
       --bg:#0b0f0e; --panel:rgba(17,24,23,.72);
       --text:#e8f3ee; --muted:#a3c0b4; --line:rgba(255,255,255,.10);
-      --accent:#28c76f; --radius:18px; --max:900px; --shadow:0 18px 60px rgba(0,0,0,.55);
+      --radius:18px; --max:900px; --shadow:0 18px 60px rgba(0,0,0,.55);
     }
     *{box-sizing:border-box}
     body{
@@ -26,19 +32,20 @@
     .title{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
     .logo{
       width:42px; height:42px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(40,199,111,.92), rgba(40,199,111,.35));
-      border:1px solid rgba(255,255,255,.08);
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.10);
       box-shadow: 0 12px 30px rgba(40,199,111,.18);
+      background: rgba(255,255,255,.03);
+      flex:0 0 auto;
     }
     h1{margin:0; font-size:18px}
     .sub{margin:0; color:var(--muted); font-size:12px}
     .chiprow{display:flex; flex-wrap:wrap; gap:10px}
     .chip{
-      text-decoration:none; color:inherit; font-size:13px; font-weight:800;
+      text-decoration:none; color:inherit; font-size:13px; font-weight:900;
       padding:10px 12px; border:1px solid var(--line);
       border-radius:999px; background: rgba(255,255,255,.03);
     }
-    .chip:hover{border-color: rgba(40,199,111,.60)}
     .panel{
       border:1px solid var(--line);
       background: var(--panel);
@@ -66,7 +73,7 @@
       padding:12px 12px;
       background: rgba(255,255,255,.02);
     }
-    summary{cursor:pointer; font-weight:900}
+    summary{cursor:pointer; font-weight:950}
     details p{margin:10px 0 0; color:var(--muted)}
     .footer{
       margin-top:18px; color:var(--muted); font-size:12px;
@@ -75,11 +82,12 @@
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="head">
       <a class="title" href="../index.html" aria-label="Back to Grocery Scout home">
-        <div class="logo" aria-hidden="true"></div>
+        <img class="logo" src="../ISIMG-981388.jpg" alt="Grocery Scout logo" />
         <div>
           <h1>Grocery Scout — Support</h1>
           <p class="sub">Help, contact, FAQs, and legal links</p>
