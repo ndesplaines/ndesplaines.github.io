@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Grocery Scout — Support & Legal</title>
+  <meta name="description" content="Grocery Scout support and legal: privacy policy, terms of service, and contact." />
+  <style>
+    :root{
+      --bg:#0b0f0e;
+      --panel:#111817;
+      --text:#e8f3ee;
+      --muted:#a3c0b4;
+      --line:rgba(255,255,255,.10);
+      --accent:#28c76f;
+      --radius:18px;
+      --max:980px;
+      --shadow:0 18px 60px rgba(0,0,0,.55);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(900px 650px at 20% 10%, rgba(40,199,111,.15), transparent 60%),
+                  linear-gradient(180deg, var(--bg), #070b0b 65%, #050707);
+      color:var(--text); line-height:1.55;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 44px;}
+    .top{
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
+      padding-bottom:14px;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .logo{
+      width:42px; height:42px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(40,199,111,.9), rgba(40,199,111,.35));
+      box-shadow: 0 12px 30px rgba(40,199,111,.18);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    h1{margin:0; font-size:16px}
+    .sub{margin:0; font-size:12px; color:var(--muted)}
+    .nav{display:flex; flex-wrap:wrap; gap:10px}
+    .chip{
+      text-decoration:none; color:inherit;
+      padding:10px 12px; border:1px solid var(--line);
+      border-radius:999px; background: rgba(255,255,255,.03);
+      font-size:13px;
+    }
+    .chip:hover{border-color: rgba(40,199,111,.55)}
+    .hero{
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background: rgba(17,24,23,.70);
+      padding:24px;
+      box-shadow: var(--shadow);
+    }
+    h2{margin:10px 0 8px; font-size:28px}
+    .lead{margin:0; color:var(--muted); max-width:78ch}
+    .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:14px; margin-top:16px}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
+      background: rgba(255,255,255,.02);
+    }
+    .card h3{margin:0 0 8px; font-size:15px}
+    .card p{margin:0; color:var(--muted)}
+    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid rgba(40,199,111,.45);
+      background: linear-gradient(180deg, rgba(40,199,111,.15), rgba(40,199,111,.06));
+      text-decoration:none; color:var(--text); font-weight:800; font-size:13px;
+    }
+    .section{margin-top:14px}
+    .section h3{margin:0 0 8px; font-size:16px}
+    .section p{margin:0; color:var(--muted)}
+    .footer{
+      margin-top:22px; color:var(--muted); font-size:12px;
+      border-top:1px solid var(--line); padding-top:16px;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="./index.html" aria-label="Grocery Scout Home">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Grocery Scout</h1>
+          <p class="sub">Support & legal information</p>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="chip" href="./support-index.html">Support</a>
+        <a class="chip" href="#privacy">Privacy</a>
+        <a class="chip" href="#terms">Terms</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <h2>Shop smarter. Compare faster.</h2>
+      <p class="lead">
+        Grocery Scout helps you compare prices, track lists, and personalize your grocery shopping experience.
+        This page provides support contact and the legal links typically requested for store listing.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Quick links</h3>
+          <p>Use these for App Store fields (Support URL, Privacy Policy URL).</p>
+          <div class="btnrow">
+            <a class="btn" href="./support-index.html">Open Support Page</a>
+            <a class="btn" href="#privacy">Privacy Policy</a>
+            <a class="btn" href="#terms">Terms of Service</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Contact</h3>
+          <p>
+            Support email: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section card" aria-label="Privacy Policy">
+      <h3>Privacy Policy (summary)</h3>
+      <p>
+        Grocery Scout may collect account information (name/email via Google/Apple),
+        profile preferences, grocery lists/history, price comparison searches, and device/usage info.
+        Location data is collected only with permission for nearby recommendations and location-based comparisons.
+      </p>
+      <p style="margin-top:10px">
+        To request access, deletion, or export of your data, contact <a href="mailto:support@njdtech.org">support@njdtech.org</a>.
+      </p>
+    </section>
+
+    <section id="terms" class="section card" aria-label="Terms of Service">
+      <h3>Terms of Service (summary)</h3>
+      <p>
+        Users agree to use the app lawfully, not attempt unauthorized access, and not collect user info without consent.
+        The service may be modified or discontinued. Pricing information is informational only; actual prices may vary
+        and should be verified with retailers.
+      </p>
+      <p style="margin-top:10px; color:var(--muted)">
+        Contact: <a href="mailto:support@njdtech.org">support@njdtech.org</a>
+      </p>
+    </section>
+
+    <div class="footer">
+      <div>
+        <a style="color:inherit" href="./support-index.html">Support</a>
+        &nbsp;•&nbsp;
+        <a style="color:inherit" href="#privacy">Privacy</a>
+        &nbsp;•&nbsp;
+        <a style="color:inherit" href="#terms">Terms</a>
+      </div>
+      <div>© <span id="y"></span> Grocery Scout</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
